@@ -1,5 +1,7 @@
 'use client'
-import styles from '@/app/page/module.css';
+import styles from '@/app/page.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function AddPost() {
@@ -37,6 +39,7 @@ export default function AddPost() {
   
     return (
         <main className={styles.main}>
+            <Link href="/">Wiev feed</Link>
             <h1>Add post</h1>
             <form onSubmit={handleSubmit}>
                 <div>
