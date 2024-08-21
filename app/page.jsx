@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Post from "./components/Post";
 import styles from "./page.module.css";
 import prisma from '@/lib/prisma';
@@ -19,6 +20,10 @@ export default async function Home() {
   const posts = await getPosts();
   return (
     <main className={styles.main}>
+      <Link href={'/add-post'}
+      >
+        Add post
+      </Link>
       <h1>Feed</h1>
       {
         posts?.map((post) => {
